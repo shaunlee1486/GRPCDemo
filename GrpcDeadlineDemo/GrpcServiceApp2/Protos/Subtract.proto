@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceApp2";
+
+package subtract;
+
+service Subtract {
+  rpc Subtract (SubtractRequest) returns (SubtractResponse);
+}
+
+
+message SubtractRequest {
+  int32 Number1 = 1;
+  int32 Number2 = 2;
+}
+
+message SubtractResponse {
+  int32 Result = 1;
+}
